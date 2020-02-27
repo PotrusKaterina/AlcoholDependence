@@ -1,7 +1,5 @@
-
-
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 import { getFromApiAsync } from '../../services/alchoholApi';
 import { styles } from './styles';
 
@@ -11,7 +9,6 @@ const MainScreen = () => {
 
     useEffect(() => {
         getFromApi();
-        console.log('render')
     }, [res])
 
     const getFromApi = async () => {
@@ -19,7 +16,6 @@ const MainScreen = () => {
         let result = {}
 
         result = await data.json();
-        console.log('result', result.ingredients[0])
         setRes(result.ingredients[0].strDescription.toString());
         setTitle(result.ingredients[0].strType.toString())
     }

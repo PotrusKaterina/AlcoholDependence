@@ -1,26 +1,15 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import MainScreen from './app/views/mainScreen/mainScreen';
+import {View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {SplashScreen} from './app/views/splashScreen/splashScreen';
 
 const App = () => {
   return (
-    <View>
-      <MainScreen />
-    </View>
+    <NavigationContainer>
+      <View>
+        <SplashScreen />
+      </View>
+    </NavigationContainer>
   );
 };
 
