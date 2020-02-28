@@ -1,13 +1,41 @@
-import React, { useEffect, useState } from 'react';
-import { Text, ScrollView } from 'react-native';
-import { getFromApiAsync } from '../../services/alchoholApi';
+import React, { useEffect } from 'react';
+import { Text, View, Image } from 'react-native';
 import { styles } from './styles';
+import Animated, { Easing } from 'react-native-reanimated';
+
 
 export const SplashScreen = () => {
-    return (
-        <ScrollView style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.text}>{res}</Text>
-        </ScrollView>
-    );
+
+
+	const _transY = new Animated.Value(0);
+	const _config = {
+		duration: 1000,
+		toValue: 180,
+		easing: Easing.inOut(Easing.ease),
+	};
+
+	const _transX = new Animated.Value(0);
+	const textConfig = {
+		duration: 1000,
+		toValue: 95,
+		easing: Easing.inOut(Easing.ease),
+	};
+
+	const anim = Animated.timing(_transY, _config);
+	const animText = Animated.timing(_transX, textConfig);
+
+
+	useEffect(() => {
+		anim.start();
+		animText.start();
+	}, []);
+
+	return (
+		<View style={styles.container}>
+			<Animated.Image style={[styles.logoImage, { transform: [{ translateY: _transY }] }]} source={require('../../assets/party.png')} />
+			<Animated.Text style={[styles.title, { transform: [{ translateX: _transX }] },]}>Alcohol Dependency</Animated.Text>
+		</View>
+	);
 };
+
+export default SplashScreen;
