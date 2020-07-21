@@ -3,22 +3,23 @@ import { config } from '../../services/config';
 
 export const styles = StyleSheet.create({
 	container: {
-		backgroundColor: config.BACKGROUND,
+		// backgroundColor: config.BACKGROUND,
+		flex: 1,
+		flexDirection: 'row',
 	},
-	backgraundImage: {
-		width: '100%',
-		height: '100%',
+	buttonContainer: {
+		flex: 1,
+		margin: 5,
+		justifyContent: 'center',
 	},
-	text: {
+	textButton: {
 		textAlign: 'center',
-		color: config.TEXT_COLOR,
-		fontSize: 18,
+		color: config.TITLE_COLOR,
+		fontSize: 36,
 		marginHorizontal: 20,
+
 	},
-	title: {
-		alignSelf: 'center',
-		color: config.TEXT_SPLASH_TITLE,
-		fontSize: 20,
-		margin: 40,
+	rightButtonContainer: {
+		flex: 1
 	},
 });

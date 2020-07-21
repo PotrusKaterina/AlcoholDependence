@@ -1,5 +1,5 @@
-export const getFromApiAsync = () => {
-	return fetch("https://the-cocktail-db.p.rapidapi.com/search.php?i=Vodka", {
+export const getFromApiAsync = (searchIngridient) => {
+	return fetch(`https://the-cocktail-db.p.rapidapi.com/search.php?i=${searchIngridient}`, {
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
