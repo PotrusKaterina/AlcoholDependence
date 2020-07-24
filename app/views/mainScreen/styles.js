@@ -3,7 +3,7 @@ import { config } from '../../services/config';
 
 export const styles = StyleSheet.create({
 	container: {
-		// backgroundColor: config.BACKGROUND,
+		backgroundColor: config.WHITE,
 		flex: 1,
 		flexDirection: 'row',
 	},
@@ -15,11 +15,13 @@ export const styles = StyleSheet.create({
 	textButton: {
 		textAlign: 'center',
 		color: config.TITLE_COLOR,
-		fontSize: 36,
+		fontSize: 20,
 		marginHorizontal: 20,
-
 	},
 	rightButtonContainer: {
 		flex: 1
 	},
+	infoIconContainer: {
+		alignItems: 'center'
+	}
 });

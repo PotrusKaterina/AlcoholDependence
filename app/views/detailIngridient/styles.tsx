@@ -3,15 +3,17 @@ import { config } from '../../services/config';
 
 export const styles = StyleSheet.create({
 	container: {
-		backgroundColor: config.SKY_BLUE,
+		backgroundColor: config.WHITE,
 	},
 	backgraundImage: {
 		width: '100%',
 		height: '100%',
 	},
 	text: {
+		backgroundColor: config.SKY_BLUE,
+		padding: 10,
+		borderRadius: 5,
 		textAlign: 'center',
-		color: config.TEXT_COLOR,
 		fontSize: 18,
 		marginHorizontal: 20,
 	},

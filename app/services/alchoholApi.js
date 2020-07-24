@@ -35,13 +35,19 @@ export const getCocktailByName = (cocktailName) => {
 };
 
 export const getCocktailByIngridient = (ingridient) => {
-	return fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?i=${ingridient}`, {
-		"method": "GET",
-		"headers": {
-			"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
-			"x-rapidapi-key": "a22cc43f1amsh965711d8ac0c73fp15d213jsnd5c5d9f256b0"
-		}
-	});
+	try {
+		return fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?i=${ingridient}`, {
+			"method": "GET",
+			"headers": {
+				"x-rapidapi-host": "the-cocktail-db.p.rapidapi.com",
+				"x-rapidapi-key": "a22cc43f1amsh965711d8ac0c73fp15d213jsnd5c5d9f256b0"
+			}
+		});
+	} catch (error) {
+		console.warn('getCocktailByIngridient error', error);
+		alert('Can`t find any cocktail by this ingridient');
+	}
+
 };
 
 export const getRandomCocktail = () => {

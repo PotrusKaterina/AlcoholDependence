@@ -1,14 +1,18 @@
 import { StyleSheet } from 'react-native';
-import { config } from '../../services/config';
+import { config } from '../../../services/config';
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: config.WHITE,
+        borderColor: config.CORALL,
+        borderWidth: 6,
+        padding: 10,
+        borderRadius: 10,
+        marginVertical: 10,
+        height: 60,
+        justifyContent: 'center',
     },
-    backgraundImage: {
-        width: '100%',
-        height: '100%',
+    name: {
+        fontSize: 20,
     },
     text: {
         textAlign: 'center',
@@ -29,15 +33,6 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
         padding: 5,
         borderRadius: 10,
-        backgroundColor: config.CORALL
-    },
-    input: {
-        flex: 7,
-        fontSize: 20,
-    },
-    flatlistContainer: {
-        width: '90%',
-        alignSelf: 'center',
-        marginTop: 10,
+        backgroundColor: config.SKY_BLUE_DARKER
     }
 });

@@ -13,9 +13,9 @@ const NavigationMainStack = () => {
 
     return (
         <NavigationContainer>
+            <Stack.Screen name="SplashScreen" component={SplashScreen} options={{ headerShown: false }} />
             <Stack.Navigator initialRouteName="SplashScreen" >
-                <Stack.Screen name="SplashScreen" component={SplashScreen} />
-                <Stack.Screen name="MainScreen" component={MainScreen} />
+                <Stack.Screen name="MainScreen" component={MainScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="DetailIngridientScreen" component={DetailIngridientScreen} />
                 <Stack.Screen name="SearchCocktailByNameScreen" component={SearchCocktailByNameScreen} />
                 <Stack.Screen name="SearchCocktailByIngridientScreen" component={SearchCocktailByIngridientScreen} />

@@ -3,7 +3,7 @@ import { config } from '../../services/config';
 
 export const styles = StyleSheet.create({
 	container: {
-		backgroundColor: config.SKY_BLUE,
+		backgroundColor: config.WHITE,
 	},
 	backgraundImage: {
 		width: '100%',
@@ -28,6 +28,6 @@ export const styles = StyleSheet.create({
 		alignSelf: 'center',
 		padding: 5,
 		borderRadius: 10,
-		backgroundColor: config.SKY_BLUE_DARKER
+		backgroundColor: config.LIGHT_ORANGE
 	}
 });

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Text, ScrollView, TextInput, View, TouchableOpacity } from 'react-native';
 import { getIngridient } from '../../services/alchoholApi';
 import { styles } from './styles';
+import { config } from '../../services/config';
 
 const DetailIngridientScreen = () => {
     const [res, setRes] = useState('');
@@ -32,7 +33,7 @@ const DetailIngridientScreen = () => {
                 <TouchableOpacity onPress={searchIngridient} style={{ backgroundColor: 'white', width: 20, flex: 1 }} />
             </View>
             <Text style={styles.title}>{title}</Text>
-            <Text style={styles.text}>{res}</Text>
+            <Text style={[styles.text, { backgroundColor: res ? config.SKY_BLUE : null }]}>{res}</Text>
         </ScrollView>
     );
 };
