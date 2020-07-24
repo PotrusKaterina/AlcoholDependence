@@ -4,7 +4,7 @@ import { styles } from './styles';
 import Animated, { Easing } from 'react-native-reanimated';
 
 
-export const SplashScreen = () => {
+export const SplashScreen = ({ navigation }) => {
 
 
 	const _transY = new Animated.Value(0);
@@ -28,6 +28,7 @@ export const SplashScreen = () => {
 	useEffect(() => {
 		anim.start();
 		animText.start();
+		navigation.navigate('MainScreen');
 	}, []);
 
 	return (
